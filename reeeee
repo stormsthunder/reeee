@@ -1,0 +1,662 @@
+<style>a { 
+	text-decoration:none;
+	color:#B3B3B3;
+}
+body { 
+	background-color:#191919;
+	margin:0px;
+	background-image:url(http://stormsthunder.net/brie/images/background.png);
+	background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+@font-face {
+    font-family: "Aesthetic";
+    src: url(http://www.stormsthunder.net/Aesthetic.ttf) format("truetype");
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+    background: #333;
+    border: 2px solid #1A1A1A;
+}
+::-webkit-scrollbar-thumb { 
+	background: #62242B;
+    border: 1px solid #1A1A1A;
+}
+
+.modal {
+	display:none;
+    opacity: 1;
+    position: fixed; 
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+	animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .4s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+		transform:scale(.2);
+    }
+    100% {
+        opacity: 1;
+		transform:scale(1);
+    }
+}
+
+.modal-content {
+    background-color:rgba(25,25,25,.6);
+	border:1px solid #222;
+    padding: 20px;
+	position: absolute;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.orsid:before {
+    content: '';
+    display: block;
+	position:absolute;
+    width: 1px;
+    height: 100%;
+	margin-top:80px;
+    margin-left: 210px;
+    opacity: .3;
+    border-left: 1px dashed #8F2B37;
+}
+.orsid {
+	position:fixed;
+	width:200px;
+	height:100%;
+	border-right:1px dotted #8F2B37;
+	background-color:rgba(15,15,15,0.6);
+}
+.orsidgifimg {
+	width: 112px;
+	height:112px;
+    transform: rotate(45deg);
+    margin-top: -16px;
+    margin-left: -16px;    
+	background-size:cover;
+	background-blend-mode: multiply;
+    background-color: #8F2B37;
+}
+.orsidgif {
+	position:relative;
+	z-index:1;
+	width: 80px;
+    height: 80px;
+    overflow: hidden;
+    transform: rotate(-45deg);
+    margin-left: 145px;
+    margin-top: 80px;
+	border:15px solid #191919;
+	box-shadow: 0 0 0 1px #8F2B37;
+}
+.orsidbutom {
+    margin-left: 183px;
+    margin-top: 50px;
+}
+.orsidbut {
+	width: 15px;
+    height: 15px;
+	background:#191919;
+    overflow: hidden;
+    transform: rotate(-45deg);
+	border:10px solid #191919;
+	box-shadow: 0 0 0 1px #8F2B37;
+	margin-bottom:22px;
+	font-size:13px;
+}
+.orbutrot {
+    transform: rotate(45deg);
+	margin-left:1px;
+	margin-top:0px;
+	color:#828282;
+	transition:.6s;
+}
+.orsidbut:hover .orbutrot {
+	transform:rotate(-315deg);
+	transition:.6s;
+	color:#8F2B37;
+}
+.orbutmen {
+    float: right;
+    width: 100px;
+    border-bottom: 1px solid #8f2b37;
+    margin-top: -57px;
+    margin-right: 25px;
+    font-family: roboto;
+    color: #e4e4e4;
+    font-size: 8.4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0px 5px 7px 0px;
+    transform: scale(0, 1);
+	transform-origin: right;
+	transition:.6s;
+}
+.orsidbut:hover + .orbutmen {
+    transform: scale(1);
+    float: right;
+	transition: ease-out .6s;;
+}
+.orbutmen a {
+	opacity:0;
+    color: #e4e4e4;
+	transition:.6s;
+}
+.orsidbut:hover + .orbutmen a {
+    transition-delay: .6s;
+	opacity:1;
+}
+.orov {
+	margin-left: 265px;
+    width: 700px;
+    margin-top: -13px;
+    float: left;
+    color: #353535;
+    font-family: Aesthetic;
+    text-transform: lowercase;
+	font-size:80px;
+	letter-spacing: -3px;
+	opacity:.4;
+	text-shadow: -1px 0 #391a1e, 0 1px #391a1e, 1px 0 #391a1e, 0 -1px #391a1e;
+}
+.orovun {
+	position:absolute;
+	margin-top:116px;
+	margin-left:230px;
+	width:720px;
+	text-align:right;
+	font-family:lato;
+	text-transform:uppercase;
+	font-size:8.4px;
+	letter-spacing:2px;
+	color:#909090;
+	padding-bottom:8px;
+	z-index:-1;
+	border-bottom:1px dashed #391a1e;
+}
+.ovcont {
+	overflow: auto;
+    position: fixed;
+    top: 180px;
+    left: 250px;
+    bottom: 50px;
+    width: 700px;
+	padding:0px 20px;
+    margin: 0 auto;
+	z-index:7;
+}
+.ovcharom {
+	width:670px;
+	height:80px;
+	margin-top:10px;
+	margin-bottom:20px;
+	overflow:hidden;
+	border:5px solid transparent;
+	outline:1px solid #222;
+	transition:.6s;
+}
+.ovcharom:hover {
+	outline:1px solid #8F2B37;
+	transition:.6s;
+}
+.ovcharimg {
+	float:left;
+	width:400px;
+	height:80px;
+	background-size:cover;
+	background-position:center;
+	opacity:.5;
+}
+.ovcharinf {
+	float:left;
+	width:270px;
+	height:80px;
+	background-color:#151515;
+}
+.ovcharinf:before {
+	content: '';
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    margin-left: -200px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(21, 21, 21));
+}
+.ovcharnam i {
+	float:left;
+	font-size:12px;
+	margin-top:7px;
+	padding-right:20px;
+}
+.ovcharnam g {
+	float:right;
+	width:150px;
+	margin-top:-2px;
+	margin-right:-10px;
+	padding-top:2px;
+	padding-left:20px;
+	background-image:url(http://stormsthunder.net/brie/images/background.png);
+	background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.ovcharnam {
+	font-size:20px;
+	font-family:teko;
+	color:#BDBDBD;
+	width:300px;
+	text-transform:uppercase;
+	text-align:left;
+	margin-left:-70px;
+	margin-top:15px;
+	height:25px;
+	padding:2px 10px;
+	position:absolute;
+	z-index:1;
+	background-color:#62242B;
+	border:1px solid #222;
+	overflow:hidden;
+}
+
+.ovcharnamun g {
+	color:#8F2B37;
+	padding:0px 5px;
+}
+.ovcharnamun {
+	width: 322px;
+    position: absolute;
+    font-size: 8px;
+    margin-top: 50px;
+	margin-left:-70px;
+	padding-top:3px;
+    text-align: right;
+    font-family: roboto;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #878787;
+	border-top:1px solid #222;
+}
+.broom {
+	width:500px;
+	height:500px;
+	overflow:hidden;
+	background-color:#1A1A1A;
+	border:5px solid #151515;
+	outline:1px solid #222;
+}
+.broov:after {
+	content:'';
+	display:block;
+	width: 0;
+    height: 0;
+	width:120px;
+	margin-left:330px;
+    border-bottom: 35px solid #1A1A1A;
+    border-left: 50px solid transparent;
+}
+.broov {
+    width: 500px;
+    height: 35px;
+    background-color: #310f14;
+    border-bottom: 2px solid #9F4250;
+    position: absolute;
+    z-index: 10;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: screen;
+}
+.broimg {
+	height:80px;
+	width:80px;
+	border-radius:100%;
+	border:10px solid #1A1A1A;
+	float:left;
+	margin-top:10px;
+	margin-left:20px;
+	background-size:cover;
+	background-position:center;
+	box-shadow: 0 0 0 2px #9F4250;
+}
+.bronam g {
+	font-size:25px;
+	font-family:abel;
+	margin-left:-2px;
+}
+
+.bronam {
+	font-size:15px;
+	font-family:abel;
+	text-transform:uppercase;
+	color:#B9B9B9;
+	float:right;
+	padding-right:20px;
+	margin-top:3px;
+	text-shadow: -1px 0 #55222A, 0 1px #55222A, 1px 0 #55222A, 0 -1px #55222A;
+	overflow:hidden;
+}
+.brountop {
+	margin-top:37px;
+	position:absolute;
+	width:480px;
+	height:15px;
+	background-color:#1F1F1F;
+	z-index:5;
+	border-bottom:1px solid #252525;
+	text-align:right;
+	font-family:teko;
+	color:#8A8A8A;
+	font-size:12px;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	padding-top:2px;
+	padding-right:20px;
+}
+.stainf {
+	width:300px;
+	background-color:#1F1F1F;
+	border:1px solid #252525;
+	color:#8F8F8F;
+	font-family:roboto;
+	padding:20px 40px;
+	text-transform:lowercase;
+	font-size:9px;
+	margin-top:0px;
+	text-align:justify;
+	margin-bottom:40px;
+}
+
+.staom {
+	width:380px;
+	margin-bottom:10px;
+}
+.stahed {
+	display: inline-block;
+    font-family: abel;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #B9B9B9;
+    letter-spacing: 1px;
+    width: 20px;
+    margin-bottom: 14px;
+}
+.staline {
+	width:300px;
+	height:16px;
+	margin-top:-4px;
+	margin-bottom:10px;
+	background:#222;
+	float:right;
+	margin-left:18px;
+	border-radius:10px;
+	overflow:hidden;
+	border:2px solid #252525;
+}
+.stafil {
+	height:20px;
+	background-color:#8F2B37;
+	float:left;
+	margin-top:-15px;
+}
+#sta5 {
+	width:300px;
+}
+#sta4 {
+	width:240px;
+}
+#sta3 {
+	width:180px;
+}
+#sta2 {
+	width:120px;
+}
+#sta1 {
+	width:60px;
+}
+.stanum {
+	position:relative;
+	font-family:montserrat;
+	color:#C5C5C5;
+	font-size:9px;
+	margin-top:2px;
+}
+.infhead {
+	width:350px;
+	margin-bottom:10px;
+	background-color:#1F1F1F;
+	border:1px solid #252525;
+	font-family:fjalla one;
+	padding:15px 30px;
+	font-size:10px;
+	text-align:right;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	color:#8F8F8F;
+}
+.infhead g {
+	font-family:montserrat;
+	font-size:9px;
+	letter-spacing:0px;
+	float:left;
+	color:#8F2B37;
+}
+.infhead i {
+	float:left;
+	font-size:14px;
+	padding-right:10px;
+}
+.stoov {
+	width:300px;
+	color:#8F8F8F;
+	font-family:roboto;
+	padding:20px 40px;
+	text-transform:lowercase;
+	font-size:9px;
+	margin-top:10px;
+	text-align:justify;
+	margin-bottom:40px;
+	border-left:2px solid #8F2B37;
+}
+.stor {
+	padding:0px 20px;
+	text-align:justify;
+	font-family:roboto;
+	color:#B8B8B8;
+	font-size:10px;
+	line-height:16px;
+}
+.extra {
+	margin-top:20px;
+	overflow:auto;
+	padding:0px 20px;
+	text-align:justify;
+	font-family:roboto;
+	color:#B8B8B8;
+	font-size:10px;
+	line-height:16px;
+}
+.brocontent {
+	margin-top:140px;
+	height:300px;
+	width:470px;
+	overflow:auto;
+	padding-bottom:40px;
+}
+
+.brodivi {
+	width:400px;
+	height:1px;
+	background-color:#232323;
+	margin-top:40px;
+	margin-bottom:40px;
+}
+.brodivhead {
+	font-family:montserrat;
+	color:#8F2B37;
+	text-transform:uppercase;
+	padding:10px 0px;
+	text-align:left;
+	margin-left:30px;
+	text-shadow: -1px 0 #55222A, 0 1px #55222A, 1px 0 #55222A, 0 -1px #55222A;
+}
+
+.copy i {
+	color:#62242B;
+}
+.copy {
+	position:absolute;
+	margin-left:230px;
+	bottom:10px;
+	width:720px;
+	text-align: center;
+    padding: 10px 0px;
+    color: #978B87;
+    font-family: roboto;
+    font-size: 7.4px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: .8;
+}</style>
+
+<link href="https://fonts.googleapis.com/css?family=Abel|Barlow+Condensed|Bitter|Fjalla+One|Lato|Montserrat:700|Open+Sans|Oswald|Pathway+Gothic+One|Raleway|Roboto|Roboto+Condensed|Teko|Poiret+One|Kelly+Slab" rel="stylesheet">
+
+<script type="text/javascript" src="http://stormsthunder.net/brie/jquery.js"></script>
+<link rel="stylesheet" href="http://l-lin.github.io/font-awesome-animation/dist/font-awesome-animation.min.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><link rel="stylesheet" type="text/css" media="screen" href="https://nagoshiashumari.github.io/Rpg-Awesome/stylesheets/rpg-awesome.min.css">
+
+
+
+<div class="orsid"><div class="orsidgif"><div class="orsidgifimg" style="background-image:url(http://stormsthunder.net/brie/images/fillerto.png);"></div></div><div class="orsidbutom"><div class="orsidbut"><div class="orbutrot"><i class="ra ra-player-king"></i></div></div><div class="orbutmen"><a>menuone</a></div><div class="orsidbut"><div class="orbutrot"><i class="ra ra-key"></i></div></div><div class="orbutmen"><a>menutwo</a></div><div class="orsidbut"><div class="orbutrot"><i class="ra ra-potion"></i></div></div><div class="orbutmen"><a>menutre</a></div><div class="orsidbut"><div class="orbutrot"><i class="ra ra-wrench"></i></div></div><div class="orbutmen"><a>menufour</a></div></div></div>
+
+<div class="orov">Brie's Characters </div><div class="orovun">Today is just one of those days the sun comes out to really humiliate you</div>
+
+
+<center><div class="ovcont">
+
+<div class="trigger" data-modal="#modalOne"><div class="ovcharom"><div class="ovcharimg" style="background-image:url(http://stormsthunder.net/brie/images/fillerto.png)"></div><div class="ovcharinf"><div class="ovcharnam"><i class="fas fa-feather-alt"></i>The Cayde Six <g>Guardian</g></div><div class="ovcharnamun">69 yrs <g>//</g> hunter <g>//</g> best daddy</div></div></div></div>
+	
+	
+<div class="trigger" data-modal="#modalTwo"><div class="ovcharom"><div class="ovcharimg" style="background-image:url(images/fillerfire.png)"></div><div class="ovcharinf"><div class="ovcharnam"><i class="fas fa-feather-alt"></i>shaxx <g>Guardian</g></div><div class="ovcharnamun">69 yrs <g>//</g> titan <g>//</g> big gai</div></div></div></div>
+
+
+</div>
+
+<div class="copy">template and codes <i class="far fa-copyright"></i> created by <a href="https://stormcodes.tumblr.com/">storm#0420</a> - massacrahamster <i class="fas fa-at"></i> hotmail.com</div></center>
+
+<!-- Modal content start -->
+
+<div id="modalOne" class="modal"><div class="modal-content">
+      
+<center><div class="broom"><div class="broov"><div class="broimg" style="background-image:url(https://66.media.tumblr.com/7c1024b070d78007666b808afa87fc87/tumblr_pbzw9iupHn1rwgsq7o1_400.gif);"></div><div class="bronam">firstname <g>lastname</g></div></div><div class="brountop">I am <g>guardian</g></div><div class="brocontent"><div class="stainf">
+	
+	blah blah cool shit about stats here. blah blah cool shit about stats here. blah blah cool shit about stats here.
+	
+	</div>
+	<div class="staom">
+		
+		<div class="stahed">str</div><div class="staline"><div class="stanum">1 / 5</div><div class="stafil" id="sta1"></div></div><br>
+		<div class="stahed">dex</div><div class="staline"><div class="stanum">2 / 5</div><div class="stafil" id="sta2"></div></div><br>
+		<div class="stahed">int</div><div class="staline"><div class="stanum">3 / 5</div><div class="stafil" id="sta3"></div></div><br>
+		<div class="stahed">wis</div><div class="staline"><div class="stanum">4 / 5</div><div class="stafil" id="sta4"></div></div><br>
+		<div class="stahed">cha</div><div class="staline"><div class="stanum">5 / 5</div><div class="stafil" id="sta5"></div></div><br>
+		<div class="stahed">con</div><div class="staline"><div class="stanum">1 / 5</div><div class="stafil" id="sta1"></div></div><br>
+			
+			
+	  </div><div class="brodivi"></div>		
+  
+  
+<div class="infhead"><i class="ra ra-fizzing-flask"></i> <g>class</g> hunter</div>
+<div class="infhead"><i class="ra ra-torch"></i><g>sub-class</g> cool dad</div>	
+<div class="infhead"><i class="ra ra-clover"></i><g>age</g> 69 yrs</div>	
+<div class="infhead"><i class="ra ra-small-fire"></i><g>race</g> exo</div>
+<div class="infhead"><i class="ra ra-fairy"></i><g>occupation</g> daddy-o</div>	
+			
+			
+	  <div class="brodivi"></div><div class="brodivhead">history</div><div class="stoov">
+	  
+	  blah blah cool shit about story here. blah blah cool shit about story here. blah blah cool shit about story here.
+	  
+	  </div><div class="stor">story here</div>
+
+<div class="brodivi"></div><div class="brodivhead">extra information</div><div class="extra">
+	  
+extra here
+	  
+	</div></div></div></center>
+    
+	  </div></div>
+
+<!-- Modal content end -->
+<!-- Modal content start -->
+
+<div id="modalTwo" class="modal"><div class="modal-content">
+      
+<center><div class="broom"><div class="broov"><div class="broimg" style="background-image:url(https://66.media.tumblr.com/7c1024b070d78007666b808afa87fc87/tumblr_pbzw9iupHn1rwgsq7o1_400.gif);"></div><div class="bronam">firstname <g>lastname</g></div></div><div class="brountop">I am <g>guardian</g></div><div class="brocontent"><div class="stainf">
+	
+	blah blah cool shit about stats here. blah blah cool shit about stats here. blah blah cool shit about stats here.
+	
+	</div>
+	<div class="staom">
+		
+		<div class="stahed">str</div><div class="staline"><div class="stanum">1 / 5</div><div class="stafil" id="sta1"></div></div><br>
+		<div class="stahed">dex</div><div class="staline"><div class="stanum">2 / 5</div><div class="stafil" id="sta2"></div></div><br>
+		<div class="stahed">int</div><div class="staline"><div class="stanum">3 / 5</div><div class="stafil" id="sta3"></div></div><br>
+		<div class="stahed">wis</div><div class="staline"><div class="stanum">4 / 5</div><div class="stafil" id="sta4"></div></div><br>
+		<div class="stahed">cha</div><div class="staline"><div class="stanum">5 / 5</div><div class="stafil" id="sta5"></div></div><br>
+		<div class="stahed">con</div><div class="staline"><div class="stanum">1 / 5</div><div class="stafil" id="sta1"></div></div><br>
+			
+			
+	  </div><div class="brodivi"></div>		
+  
+  
+<div class="infhead"><i class="ra ra-fizzing-flask"></i> <g>class</g> hunter</div>
+<div class="infhead"><i class="ra ra-torch"></i><g>sub-class</g> cool dad</div>	
+<div class="infhead"><i class="ra ra-clover"></i><g>age</g> 69 yrs</div>	
+<div class="infhead"><i class="ra ra-small-fire"></i><g>race</g> exo</div>
+<div class="infhead"><i class="ra ra-fairy"></i><g>occupation</g> daddy-o</div>	
+			
+			
+	  <div class="brodivi"></div><div class="brodivhead">history</div><div class="stoov">
+	  
+	  blah blah cool shit about story here. blah blah cool shit about story here. blah blah cool shit about story here.
+	  
+	  </div><div class="stor">story here</div>
+
+<div class="brodivi"></div><div class="brodivhead">extra information</div><div class="extra">
+	  
+extra here
+	  
+	</div></div></div></center>
+    
+	  </div></div>
+
+<!-- Modal content end -->
+
+<script type="text/javascript">
+    $(".trigger").on("click", function() {
+  var modal = $(this).data("modal");
+  $(modal).show();
+	
+});
+
+$(".modal").on("click", function(e) {
+  var className = e.target.className;
+  if(className === "modal" || className === "close"){
+    $(this).closest(".modal").hide();
+  }
+});
+</script> 
